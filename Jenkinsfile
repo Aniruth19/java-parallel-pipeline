@@ -12,12 +12,12 @@ pipeline {
             parallel {
                 stage('Program 1') {
                     steps {
-                        bat 'Program1\\build.bat'
+                        bat 'cd Program1 && build.bat'
                     }
                 }
                 stage('Program 2') {
                     steps {
-                        bat 'Program2\\build.bat'
+                        bat 'cd Program2 && build.bat'
                     }
                 }
             }
