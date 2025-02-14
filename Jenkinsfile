@@ -12,12 +12,14 @@ pipeline {
             parallel {
                 stage('Program 1') {
                     steps {
-                        bat 'cd Program1 && build.bat'
+                        // Absolute path to build.bat in Program1 directory
+                        bat 'call "C:\\Users\\Aniruth\\Desktop\\java-parallel-pipeline\\Program1\\build.bat"'
                     }
                 }
                 stage('Program 2') {
                     steps {
-                        bat 'cd Program2 && build.bat'
+                        // Absolute path to build.bat in Program2 directory
+                        bat 'call "C:\\Users\\Aniruth\\Desktop\\java-parallel-pipeline\\Program2\\build.bat"'
                     }
                 }
             }
