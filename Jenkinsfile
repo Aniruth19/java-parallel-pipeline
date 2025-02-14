@@ -12,12 +12,12 @@ pipeline {
             parallel {
                 stage('Program 1') {
                     steps {
-                        bat './Program1/build.bat'
+                        bat 'Program1\\build.bat'
                     }
                 }
                 stage('Program 2') {
                     steps {
-                        bat './Program2/build.bat'
+                        bat 'Program2\\build.bat'
                     }
                 }
             }
@@ -26,10 +26,10 @@ pipeline {
 
     post {
         success {
-            echo "Both Java programs executed successfully!"
+            echo "🎯 Both Java programs executed successfully!"
         }
         failure {
-            echo "Build failed! Check logs."
+            echo "❌ Build failed! Check logs."
         }
     }
 }
